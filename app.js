@@ -1,17 +1,17 @@
-const express = require('express'); //require imports express packages
-const mongoose = require('mongoose'); //requires imports mongoose packages
-const bodyParser = require('body-parser'); // require imports bodyParser middleware 
-require("dotenv/config"); //importing configuration 
-const app = express();  //runs express function
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+require("dotenv/config");
+const app = express();
 
 const path = require('path');
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json()); //using middleware and telling to read json files
+app.use(bodyParser.json());
 // const postRoute = require('./routes/post.js');
 // app.use('/posts', postRoute);
 
 
-// app.get('/', (req, res) => { //getting a request and outputting a response
+// app.get('/', (req, res) => { 
 //     res.send('you are connected');
 // })
 // app.get("/posts", (req, res) => { //posting the route to http request
@@ -35,23 +35,36 @@ const contactSchema = {
 //create model
 const contact = mongoose.model("contact", contactSchema)
 
-app.post("/", (req, res) => {
+app.post("/contact", (req, res) => {
     let newContact = new contact({
         name: req.body.name,
         email: req.body.email,
         message: req.body.message
     });
     newContact.save();
-    res.redirect('/');
+    res.redirect('/contact');
 })
 
 app.use(express.static(__dirname + '/public'));
 
 
 //route
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname + '/home.html'));
+})
+
+app.get('/aboutus', (req, res) => {
+    res.sendFile(path.join(__dirname + '/aboutus.html'));
+})
+
+app.get('/assistance', (req, res) => {
+    res.sendFile(path.join(__dirname + '/assistance.html'));
+})
+
+app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname + '/contact.html'));
 })
+
 
 //importing users routers and set it to starts with 'users'
 // const userRouter = require('./routes/users')
