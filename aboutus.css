@@ -197,11 +197,11 @@ li a:hover {
 
 /* nav bar ends here */
 .hero-image {
-  background-image: url(pics/bus.jpeg);
+  background-image: url(public/pics/bus.jpeg);
   height: 13vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("pics/bus.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/pics/bus.jpeg");
 }
 
 .hero-text {
