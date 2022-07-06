@@ -7,20 +7,6 @@ const app = express();
 const path = require('path');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// const postRoute = require('./routes/post.js');
-// app.use('/posts', postRoute);
-
-
-// app.get('/', (req, res) => { 
-//     res.send('you are connected');
-// })
-// app.get("/posts", (req, res) => { //posting the route to http request
-//     res.send('we are in post');
-// })
-// //connect to db
-// mongoose.connect(process.env.DB_CONNECTION, () => { //mongoose is the db
-//     console.log('connected to db');
-// })
 
 //connect to database 
 mongoose.connect('mongodb+srv://hyeb96:Sm17emina@cluster0.yyfegbj.mongodb.net/hopehack', { useNewUrlParser: true }, { useUnifiedTopology: true })
@@ -49,7 +35,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 //route
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/home.html'));
 })
 
