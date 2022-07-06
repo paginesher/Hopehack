@@ -70,12 +70,12 @@ h1 {
 #red2 {
     color: red;
     position: relative;
-    left: 40vw;
+    left: 30vw;
     top: 1vw;
 }
 
 .about-us {
-    height: 50vh;
+    height: 30vh;
     background-color: beige;
 
 }
@@ -94,7 +94,7 @@ h1 {
 
 .buttons {
     background-color: rgb(255, 157, 0);
-    padding: 10px;
+    /* padding: 10px; */
     margin: auto;
     border-radius: 30px;
     width: 15vw;
@@ -105,10 +105,15 @@ h1 {
     font-size: 2vw;
 }
 
+.buttons a {
+    text-decoration: none;
+    color: black;
+}
+
 blockquote {
     position: absolute;
     top: 50vw;
-    left: 20vw;
+    left: 3vw;
     color: rgba(255, 255, 255, 0.626);
     font-size: 1.5vw;
 }
@@ -123,7 +128,7 @@ blockquote {
 }
 
 body {
-    background-color: #9E9B9B;
+    background-color: beige;
     margin: 0;
 }
 
