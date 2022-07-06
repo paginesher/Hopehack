@@ -47,6 +47,10 @@ app.get('/assistance', (req, res) => {
     res.sendFile(path.join(__dirname + '/assistance.html'));
 })
 
+app.get('/statistic', (req, res) => {
+    res.sendFile(path.join(__dirname + '/API.html'));
+})
+
 app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname + '/contact.html'));
 })
