@@ -3,21 +3,12 @@ const ctx = document.getElementById('canvas').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Ardrey Kell High School', 'Providence High School', 'Myers Park High School', 'Phillip O. Berry Academy of Technology', 'South Mecklenburg High School'],
+        labels: ['Good Teachers', 'Curricuium/Academics', 'School Safetly', 'Test Scores', 'Academic Grwoth Rates', 'Distance From Our Home', 'Extracurricular Activities', 'Opinions Of Other Parents', 'Disipline-Enforced', 'Cleaniness', 'Special Education', 'High Graudation Rates'],
         datasets: [{
             label: 'School Ratings in Charlotte',
-            data: [ 10, 10, 8, 6, 9],
+            data: [ 76, 68, 58, 43, 36, 29, 27, 27, 24, 21, 18, 14],
             backgroundColor: 'transparent',
             borderColor: 'blue',
-            borderWidth: 4
-    
-    },
-    {
-        labels: ['Random High School'],
-            label: 'School Ratings in Atlanta',
-            data: [10, 9, 3, 5, 2, ],
-            backgroundColor: 'transparent',
-            borderColor: 'green',
             borderWidth: 4
         }]
     },
