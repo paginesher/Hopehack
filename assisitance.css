@@ -150,6 +150,19 @@ li a:hover {
         border-bottom-right-radius: 10px !important;
       }
 
+      .container1{
+        width: 85%;
+        height: 1000px;
+        background-color: black;
+      }
+      h1{
+        text-align: center;
+        font-size: 46px;
+      }
+      #canvas{
+        width: 100%;
+      }
+
 
 
 
