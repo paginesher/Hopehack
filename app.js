@@ -57,6 +57,21 @@ app.get('/statistic', (req, res) => {
 app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname + '/contact.html'));
 })
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/home.css'));
+})
+app.get('/aboutus', (req, res) => {
+    res.sendFile(path.join(__dirname + '/aboutus.css'));
+})
+app.get('/assistance', (req, res) => {
+    res.sendFile(path.join(__dirname + '/assistance.css'));
+})
+
+app.get('/statistic', (req, res) => {
+    res.sendFile(path.join(__dirname + '/style.css'));
+
+
+
 
 
 //importing users routers and set it to starts with 'users'
