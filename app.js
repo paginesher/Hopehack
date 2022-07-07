@@ -32,26 +32,26 @@ app.post("/contact", (req, res) => {
 })
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + "/public.pics"));
+// app.use(express.static(__dirname + "/public.pics"));
 
-app.use("/public", express.static(path.resolve(__dirname, "public")))
-app.use("/pics", express.static(path.resolve(__dirname, "public/pics")))
+// app.use("/public", express.static(path.resolve(__dirname, "public")))
+// app.use("/pics", express.static(path.resolve(__dirname, "public/pics")))
 
 //route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + "/public/" +"/index.html"));
-})
+    res.sendFile(__dirname + "/public/" +"/index.html");
+});
 
 app.get('/aboutus', (req, res) => {
-    res.sendFile(path.join(__dirname + "/public/" + "/aboutus.html"));
-})
+    res.sendFile(__dirname + "/public/" + "/aboutus.html");
+});
 
 app.get('/assistance', (req, res) => {
-    res.sendFile(path.join(__dirname + "/pulic/" + "/assistance.html"));
-})
+    res.sendFile(__dirname + "/pulic/" + "/assistance.html");
+});
 
 app.get('/statistic', (req, res) => {
-    res.sendFile(path.join(__dirname +  "/public/" + "/API.html"));
+    res.sendFile(__dirname +  "/public/" + "/API.html");
 });
 
 
