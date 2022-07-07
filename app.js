@@ -40,25 +40,27 @@ app.use("/pics", express.static(path.resolve(__dirname, "public/pics")))
 //route
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname  +'/index.html'));
-})
+});
 
 app.get('/aboutus', (req, res) => {
     res.sendFile(path.join(__dirname + '/aboutus.html'));
-})
+});
 
-app.get('/statistic', (req, res) => {
+app.get('/assistance', (req, res) => {
     res.sendFile(path.join(__dirname +  '/assistance.html'));
 });
 
 app.get('/statistic', (req, res) => {
     res.sendFile(path.join(__dirname +  '/API.html'));
 });
-app.get('/statistic', (req, res) => {
+app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname +  '/contact.html'));
+});
 
 //importing users routers and set it to starts with 'users'
 // const userRouter = require('./routes/users')
 // app.use('/users', userRouter)
 
 
-app.listen(3000); //telling to listen on port 3000
+ app.listen(process.env.PORT || 3000); //telling to listen on port 3000
+
