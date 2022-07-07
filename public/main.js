@@ -5,6 +5,13 @@ const myChart = new Chart(ctx, {
         labels: ['Ardrey Kell High School', 'Providence High School', 'Myers Park High School', 'Phillip O. Berry Academy of Technology', 'South Mecklenburg High School'],
         datasets: [{
             label: 'School Ratings in Charlotte',
+< laura2
+            data: [ 10, 10, 8, 6, 9],
+            backgroundColor: 'transparent',
+            borderColor: 'blue',
+            borderWidth: 4
+    
+
             data: [10, 10, 8, 6, 9],
             backgroundColor: 'transparent',
             borderColor: 'blue',
@@ -14,15 +21,29 @@ const myChart = new Chart(ctx, {
         {
 
         }]
-    },
 
+    },
+    { 
+        
+    }]
+},
+
+
+options: {
+    scales: {
+        y: {
+            beginAtZero: true
 
     options: {
         scales: {
             y: {
                 beginAtZero: true
             }
+>
         }
     }
+}
 });
 
+
+    
