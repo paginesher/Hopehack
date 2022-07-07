@@ -39,20 +39,20 @@ app.use("/pics", express.static(path.resolve(__dirname, "public/pics")))
 
 //route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + "/public/" +"/index.html"));
 })
 
 app.get('/aboutus', (req, res) => {
-    res.sendFile(path.join(__dirname + '/aboutus.html'));
+    res.sendFile(path.join(__dirname + "/public/" + "/aboutus.html"));
 })
 
 app.get('/assistance', (req, res) => {
-    res.sendFile(path.join(__dirname + '/assistance.html'));
+    res.sendFile(path.join(__dirname + "/pulic/" + "/assistance.html"));
 })
 
 app.get('/statistic', (req, res) => {
-    res.sendFile(path.join(__dirname + '/API.html'));
-})
+    res.sendFile(path.join(__dirname +  "/public/" + "/API.html"));
+});
 
 
 
